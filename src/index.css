@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.6), transparent 40%),
+    linear-gradient(180deg, #d9cfb7 0%, #e8dcc2 18%, #f4ecde 100%);
+  color: #181311;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  position: relative;
+  overflow-x: clip;
+}
+
+.page-shell::before,
+.page-shell::after {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(28px);
+}
+
+.page-shell::before {
+  top: -6rem;
+  left: -7rem;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.page-shell::after {
+  top: 18rem;
+  right: -5rem;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(202, 100, 47, 0.12);
+}
+
+.section-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1320px, calc(100% - 12px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(202, 100, 47, 0.22);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #ca642f;
+  box-shadow: 0 0 0 3px rgba(202, 100, 47, 0.14);
+}
+
+.title-main {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.paper-noise {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 32%),
+    radial-gradient(circle at 80% 15%, rgba(202, 100, 47, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55));
+}
+
+.dark-swirl {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.035), transparent 24%),
+    radial-gradient(circle at 80% 84%, rgba(255, 255, 255, 0.03), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+.cta-saw {
+  position: absolute;
+  top: 50%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 9999px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.98;
+  background:
+    radial-gradient(circle at center, #231c19 0 68%, transparent 68.5%),
+    repeating-conic-gradient(
+      from 0deg,
+      #231c19 0deg 8deg,
+      #231c19 8deg 12deg,
+      transparent 12deg 16deg
+    );
+  filter: drop-shadow(0 10px 24px rgba(19, 13, 11, 0.22));
+}
+
+.cta-saw::after {
+  content: '';
+  position: absolute;
+  inset: 18%;
+  border-radius: 9999px;
+  background: rgba(24, 19, 17, 0.9);
+}
+
+.cta-saw-left {
+  left: -9rem;
+}
+
+.cta-saw-right {
+  right: -9rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    width: min(1320px, calc(100% - 20px));
+  }
+
+  .cta-saw {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .cta-saw-left {
+    left: -10rem;
+  }
+
+  .cta-saw-right {
+    right: -10rem;
+  }
+}
