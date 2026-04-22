@@ -1,6 +1,39 @@
+import { useState } from 'react'
 import logo from '../assets/brand-logo.svg'
 
+const CONTACT_EMAIL = 'info@nackabyggpartner.se'
+
 function Footer() {
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  })
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setForm((current) => ({ ...current, [name]: value }))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const subject = encodeURIComponent(`Förfrågan från ${form.name || 'webbplatsen'}`)
+    const body = encodeURIComponent(
+      [
+        `Namn: ${form.name || '-'}`,
+        `Telefon: ${form.phone || '-'}`,
+        `E-post: ${form.email || '-'}`,
+        '',
+        'Meddelande:',
+        form.message || '-',
+      ].join('\n'),
+    )
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+  }
+
   return (
     <footer id="contact" className="pb-8">
       <div className="section-shell overflow-hidden rounded-b-[28px] border-x border-b border-black/8 bg-[rgba(248,241,229,0.96)] px-5 py-7 text-[#181311] sm:px-8 sm:py-14 lg:px-10">
@@ -23,7 +56,9 @@ function Footer() {
                 </div>
                 <div className="mt-3 space-y-2 text-sm text-black/72">
                   <p>Stockholm / Nacka</p>
-                  <p className="break-all">kontakt@nackabyggpartner.se</p>
+                  <p className="break-all">
+                    <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                  </p>
                   <p>+46 70 000 00 00</p>
                 </div>
               </div>
@@ -47,34 +82,46 @@ function Footer() {
               <h4 className="title-main text-[1.8rem] text-[#181311] sm:text-[2rem]">
                 Kontakta oss
               </h4>
-              <div className="mt-4 grid gap-3 sm:mt-5">
+              <form onSubmit={handleSubmit} className="mt-4 grid gap-3 sm:mt-5">
                 <input
                   type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   placeholder="Namn"
                   className="w-full rounded-xl border border-black/10 bg-[#fffdf8] px-4 py-3 text-sm outline-none"
                 />
                 <input
                   type="text"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
                   placeholder="Tel"
                   className="w-full rounded-xl border border-black/10 bg-[#fffdf8] px-4 py-3 text-sm outline-none"
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   placeholder="E-post"
                   className="w-full rounded-xl border border-black/10 bg-[#fffdf8] px-4 py-3 text-sm outline-none"
                 />
                 <textarea
                   rows="4"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   placeholder="Meddelande"
                   className="w-full resize-y rounded-xl border border-black/10 bg-[#fffdf8] px-4 py-3 text-sm outline-none"
                 />
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex w-full items-center justify-center rounded-xl bg-[#ca642f] px-6 py-3 text-sm font-semibold text-white sm:w-fit"
                 >
                   Skicka förfrågan
                 </button>
-              </div>
+              </form>
             </div>
 
             <div
@@ -93,7 +140,7 @@ function Footer() {
                 eller projektansvar får du gärna kontakta oss direkt.
               </p>
               <a
-                href="mailto:kontakt@nackabyggpartner.se"
+                href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Spontanansökan')}`}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#fff8ee] px-6 py-3 text-sm font-semibold text-[#231f1d] sm:w-auto"
                 style={{ backgroundColor: '#fff8ee', color: '#181311' }}
               >

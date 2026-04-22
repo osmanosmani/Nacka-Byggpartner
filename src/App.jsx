@@ -13,6 +13,12 @@ function App() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
+  useEffect(() => {
+    if (hash.match(/^#\/tjanster\/([^/]+)$/) || hash === '' || hash === '#home') {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }
+  }, [hash])
+
   const serviceMatch = hash.match(/^#\/tjanster\/([^/]+)$/)
 
   if (serviceMatch) {
