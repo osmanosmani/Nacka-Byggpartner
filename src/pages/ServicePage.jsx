@@ -45,7 +45,7 @@ function ServicePage({ service }) {
             <img
               src={service.image}
               alt={service.title}
-              className="h-[240px] w-full rounded-[24px] object-cover shadow-[0_16px_40px_rgba(44,28,15,0.12)] sm:h-[320px] sm:rounded-[28px] lg:h-[460px]"
+              className="media-chamfer h-[240px] w-full rounded-[24px] object-cover shadow-[0_16px_40px_rgba(44,28,15,0.12)] sm:h-[320px] sm:rounded-[28px] lg:h-[460px]"
             />
           </div>
         </div>

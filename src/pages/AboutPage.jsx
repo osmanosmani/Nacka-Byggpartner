@@ -55,7 +55,7 @@ function AboutPage({ hash }) {
               <img
                 src={heroImage}
                 alt="Nacka Byggpartner projekt"
-                className="h-[240px] w-full rounded-[16px] object-cover sm:h-[320px] lg:h-[460px]"
+                className="media-chamfer h-[240px] w-full rounded-[16px] object-cover sm:h-[320px] lg:h-[460px]"
               />
             </div>
           </div>
@@ -125,7 +125,7 @@ function AboutPage({ hash }) {
               <img
                 src={detailImage}
                 alt="Detalj från byggprojekt"
-                className="h-[260px] w-full rounded-[16px] object-cover sm:h-[320px]"
+                className="media-chamfer h-[260px] w-full rounded-[16px] object-cover sm:h-[320px]"
               />
             </div>
 

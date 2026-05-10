@@ -1,165 +1,165 @@
-import image1 from '../assets/img/nacka-byggpartner-gallery (1).jpg'
-import image7 from '../assets/img/nacka-byggpartner-gallery (7).jpg'
-import image8 from '../assets/img/nacka-byggpartner-gallery (8).jpg'
-import image9 from '../assets/img/nacka-byggpartner-gallery (9).jpg'
-import image10 from '../assets/img/nacka-byggpartner-gallery (10).jpg'
-import image11 from '../assets/img/nacka-byggpartner-gallery (11).jpg'
+import nybyggImage from '../assets/selected-work/services/nybyggnation/hero.png'
+import tillbyggImage from '../assets/selected-work/services/tillbyggnation/hero.jpg'
+import ombyggImage from '../assets/selected-work/services/ombyggnation/hero.jpg'
+import kontrollImage from '../assets/selected-work/services/kontrollansvarig/hero.jpeg'
+import konsultImage from '../assets/selected-work/services/byggkonsultation/hero.png'
+import serviceImage from '../assets/selected-work/services/byggservice/hero.jpg'
 
 export const services = [
   {
     slug: 'nybyggnation',
     title: 'Nybyggnation',
     shortText:
-      'Vi tar ett helhetsgrepp från idé och systemprojektering till upphandling, samordning och färdigt hus.',
-    image: image9,
+      'Vi tar ett helhetsgrepp från idé och projektering till samordning, utförande och färdigt hem.',
+    image: nybyggImage,
     intro:
-      'Att bygga nytt ger stor frihet men kräver också kunskap, struktur och en tydlig process. Vi hjälper dig genom hela resan från den första idén till slutbesked och färdigt hem.',
+      'Att bygga nytt ger stora möjligheter, men kräver också struktur, rätt prioriteringar och trygg samordning. Vi hjälper dig genom hela resan från första skiss till färdigt hus.',
     sections: [
       {
-        heading: 'Ett hus växer fram',
+        heading: 'Från första tanke till färdig byggnad',
         body:
-          'Processen börjar med idé, behovsanalys och undersökning av förutsättningarna. Sedan följer idéskiss, dialog med kommunen, systemprojektering, val av entreprenadform, bygglov, tekniskt samråd, utstakning, inköp av resurser, mark- och grundarbeten, stomme, installationer, slutkontroll och slutsamråd.',
+          'Processen börjar med behovsanalys, platsens förutsättningar och ett tydligt program. Därefter följer projektering, dialog med kommunen, materialval, planering av resurser och ett genomförande där varje steg hålls ihop på ett kontrollerat sätt.',
       },
       {
-        heading: 'Fördelar med nybyggnation',
+        heading: 'Ett hem som håller över tid',
         body:
-          'När du bygger nytt vet du vad du får. Du väljer tomt, planlösning, material och tekniska lösningar från start. Det ger bättre kontroll över budget, lägre driftkostnader, mindre underhåll och ett hem som formas efter dina behov.',
+          'När du bygger nytt skapar du rätt förutsättningar från början. Det ger bättre kontroll över funktion, drift, material och ekonomi samtidigt som huset kan anpassas fullt ut efter hur du vill leva och använda det.',
       },
     ],
     highlights: [
-      'Helhetsansvar genom hela byggprocessen',
-      'Tydlig samordning mellan ritningar, bygglov och produktion',
-      'Stor kontroll över materialval, funktion och ekonomi',
+      'Helhetsansvar från skiss och projektering till färdig byggnation',
+      'Tydlig samordning mellan ritningar, beslut och produktion',
+      'Fokus på material, funktion och långsiktig kvalitet',
     ],
   },
   {
     slug: 'tillbyggnation',
     title: 'Tillbyggnation',
     shortText:
-      'Ritningar, bygglov, materialval och startbesked samordnas så att din tillbyggnad får en tydlig och trygg process.',
-    image: image11,
+      'Ritningar, bygglov, materialval och startbesked samordnas så att din tillbyggnad får en trygg och tydlig process.',
+    image: tillbyggImage,
     intro:
-      'Att bygga till är ofta ett smart alternativ till att flytta. Med rätt process kan en tillbyggnad skapa mer boyta, höja värdet på fastigheten och ge plats för nya behov i vardagen.',
+      'Att bygga till är ofta ett bättre alternativ än att flytta. Med rätt planering kan en tillbyggnad skapa mer yta, bättre flöde och ett hem som fungerar bättre för nästa fas i livet.',
     sections: [
       {
-        heading: 'Så går det till',
+        heading: 'En tydlig väg från skiss till byggstart',
         body:
-          'Tillbyggnad börjar ofta med A-ritningar och kontroll av detaljplanen. Efter det följer bygglov, kontroll av behovet av kontrollansvarig, detaljplanering av materialval, konstruktionsritningar, offert, kontrakt och till sist startbesked innan byggstart.',
+          'Tillbyggnader börjar ofta med A-ritningar och kontroll mot detaljplanen. Därefter följer lov- eller anmälningsfrågor, tekniska underlag, materialval och planering av genomförandet så att projektet står stabilt redan innan första spadtaget.',
       },
       {
-        heading: 'En investering i boendet',
+        heading: 'Mer plats med rätt proportioner',
         body:
-          'Att bo kvar och bygga till har blivit allt vanligare. I många fall är det billigare att bygga ut huset än att köpa nytt, samtidigt som du får större boyta, möjligen ROT-avdrag och en värdestegring i fastigheten.',
+          'En lyckad tillbyggnad handlar inte bara om fler kvadratmeter. Den ska också kännas naturlig i relation till huset, tomten och hur ytorna används i vardagen. Därför arbetar vi med både funktion och helhet i varje lösning.',
       },
     ],
     highlights: [
-      'Samordning av arkitekt, konstruktionsritningar och bygglov',
-      'Stöd i processen från första skiss till byggstart',
-      'Tillbyggnaden anpassas efter bostadens och tomtens förutsättningar',
+      'Samordning av ritningar, bygglov och tekniska beslut',
+      'Tydlig struktur inför startbesked och byggstart',
+      'Lösningar som passar husets uttryck och vardagens behov',
     ],
   },
   {
     slug: 'ombyggnation',
     title: 'Ombyggnation',
     shortText:
-      'Vi hjälper dig att utveckla befintliga ytor med rätt planlösning, regelverk och praktiska lösningar.',
-    image: image10,
+      'Vi hjälper dig att utveckla befintliga ytor med rätt planlösning, detaljering och praktiska beslut längs vägen.',
+    image: ombyggImage,
     intro:
-      'Ombyggnation handlar ofta om att anpassa huset efter nya behov. Det kan vara allt från ändrad planlösning till förnyelse av större delar av byggnaden, invändigt eller utvändigt.',
+      'Ombyggnation handlar om att förädla det som redan finns. Det kan vara allt från att öppna upp ett hem invändigt till att bygga om uteplatser, entréer eller andra ytor så att de fungerar bättre i vardagen.',
     sections: [
       {
-        heading: 'När ett hem behöver förändras',
+        heading: 'När befintliga ytor behöver fungera bättre',
         body:
-          'En ombyggnation kan uppstå när familjen växer, hallen är för liten, terrassen behöver förnyas eller ett förråd ska bli tvättstuga. Det kan handla om ändrad planlösning, byte av tekniska system eller att göra biyta till boyta.',
+          'En ombyggnation kan uppstå när familjen växer, när flöden inte längre fungerar eller när en utemiljö behöver ett nytt uttryck. Vi hjälper till att hitta rätt nivå på åtgärden och att planera den med tydlig riktning.',
       },
       {
-        heading: 'Regler och förutsättningar',
+        heading: 'Detaljer som lyfter helheten',
         body:
-          'Det är viktigt att tidigt reda ut om projektet omfattas av lov- eller anmälningsplikt och vilka krav som gäller. Vi hjälper till att ta fram en tydlig plan och att orientera projektet mot rätt nivå av krav och genomförande.',
+          'I många ombyggnader ligger den stora skillnaden i utförandet. Materialmöten, höjder, trappsteg, räcken, övergångar och ytskikt behöver spela ihop för att resultatet ska kännas genomarbetat och hållbart över tid.',
       },
     ],
     highlights: [
-      'Både invändiga och utvändiga ombyggnader',
-      'Stöd i regelverk, planering och tekniska beslut',
-      'Lösningar som fungerar praktiskt i vardagen',
+      'Ombyggnation av både invändiga och utvändiga ytor',
+      'Praktiska lösningar för funktion, uttryck och hållbarhet',
+      'Noggrannhet i detaljer som påverkar helhetsintrycket',
     ],
   },
   {
     slug: 'kontrollansvarig',
     title: 'Kontrollansvarig',
     shortText:
-      'En erfaren kontrollansvarig förenklar bygget, hjälper med kontrollplan och ser till att projektet följer kraven.',
-    image: image1,
+      'En erfaren kontrollansvarig förenklar bygget, hjälper med kontrollplan och ser till att projektet följer rätt krav.',
+    image: kontrollImage,
     intro:
-      'Många projekt kräver en kontrollansvarig. Rätt person i den rollen förenklar hela byggprocessen, minskar risken för onödiga misstag och skapar trygghet gentemot kommunen och gällande regelverk.',
+      'Många projekt kräver en certifierad kontrollansvarig. Med rätt person i rollen blir processen tydligare, tryggare och bättre förankrad mot både kommunen och de tekniska kraven.',
     sections: [
       {
-        heading: 'När behövs en KA?',
+        heading: 'När en KA behövs',
         body:
-          'Om en åtgärd kräver lov eller anmälan måste du som regel utse en certifierad kontrollansvarig. Kommunen avgör om det behövs i projektet och godkänner den tilltänkta kontrollansvarige.',
+          'Om en åtgärd kräver lov eller anmälan måste du som regel utse en kontrollansvarig. Kommunen avgör behovet i projektet och godkänner den person som föreslås, vilket gör det viktigt att komma in med rätt kompetens redan tidigt.',
       },
       {
-        heading: 'Vad gör en kontrollansvarig?',
+        heading: 'En roll som skapar ordning och trygghet',
         body:
-          'Den kontrollansvarige hjälper till med kontrollplan, tekniskt samråd, kontroller under projektets gång och utlåtande som ligger till grund för byggnadsnämndens slutbesked. Rollen ska vara oberoende och utövas av certifierad person.',
+          'Den kontrollansvarige hjälper till med kontrollplan, tekniskt samråd, uppföljning under projektet och det utlåtande som ligger till grund för slutbesked. Rollen skapar struktur och minskar risken för onödiga felsteg i genomförandet.',
       },
     ],
     highlights: [
-      'Hjälp med kontrollplan och samråd',
+      'Hjälp med kontrollplan, samråd och uppföljning',
       'Stöd genom byggprocessen och mot kommunen',
-      'Tryggare projekt med rätt kunskap och inställning',
+      'Tryggare projekt med rätt dokumentation och kontroll',
     ],
   },
   {
     slug: 'byggkonsultation',
     title: 'Byggkonsultation',
     shortText:
-      'Vi stöttar med råd, offertutvärdering, kvalitetsbedömning, byggledning och bemanning av hantverkare.',
-    image: image7,
+      'Vi stöttar med råd, offertutvärdering, kvalitetsbedömning, byggledning och beslut som kräver erfaren blick.',
+    image: konsultImage,
     intro:
       'Byggkonsultation passar dig som behöver klarhet i delar av processen och vill fatta bättre beslut innan eller under ett projekt.',
     sections: [
       {
-        heading: 'Råd på vägen',
+        heading: 'Rådgivning när besluten är viktiga',
         body:
-          'Vi hjälper dig när du ska bygga om eller till men känner dig osäker i delar av processen. Det kan handla om inköpskonsultation, utvärdering av offerter, kvalitetsbedömning av hantverkstjänster eller byggledning.',
+          'Vi hjälper dig när du ska bygga om, bygga till eller starta ett nytt projekt men behöver stöd i vägvalen. Det kan handla om att läsa ritningar, jämföra offerter, förstå konsekvenser i utförandet eller hitta rätt nivå i projektets upplägg.',
       },
       {
-        heading: 'Erfarenhet som stöd',
+        heading: 'Erfarenhet som gör processen tydligare',
         body:
-          'Med mångårig erfarenhet kan vi ge råd om vilka beslut som är viktiga, vilka risker som finns och hur projektet bör struktureras för att bli tryggare och mer kostnadseffektivt.',
+          'Med lång erfarenhet från projektering och genomförande kan vi bidra med det utifrånperspektiv som behövs för att skapa trygghet, tydlighet och bättre beslut innan problemen uppstår.',
       },
     ],
     highlights: [
       'Utvärdering av offerter och entreprenörer',
       'Byggledning och praktisk rådgivning',
-      'Kvalitetsbedömning och bemanningsstöd',
+      'Stöd i planering, prioritering och tekniska beslut',
     ],
   },
   {
     slug: 'byggservice',
     title: 'Byggservice',
     shortText:
-      'Dränering, tak och tilläggsisolering är exempel på insatser där vi kombinerar erfarenhet med praktisk nytta.',
-    image: image8,
+      'Dränering, tak, fasad och tilläggsisolering är exempel på insatser där praktisk nytta och hållbarhet går hand i hand.',
+    image: serviceImage,
     intro:
-      'Byggservice omfattar de viktiga insatser som förbättrar funktion, energieffektivitet och hållbarhet i huset över tid.',
+      'Byggservice omfattar de viktiga insatser som förbättrar funktion, energieffektivitet och livslängd i huset över tid.',
     sections: [
       {
-        heading: 'Dränering och tak',
+        heading: 'Tak, fasad och klimatskal',
         body:
-          'Fukt, mögel, dålig lukt eller gammal teknik kan vara tecken på att ny dränering behövs. Vi arbetar också med takbyte och är certifierade för Plannjas plåttak, ett slitstarkt och hållbart material med lång livslängd.',
+          'Slitna tak, fuktutsatta fasader eller gamla lösningar i klimatskalet påverkar både uttryck och funktion. Vi hjälper till att planera åtgärder som stärker huset och samtidigt skapar ett mer hållbart resultat.',
       },
       {
-        heading: 'Tilläggsisolering',
+        heading: 'Åtgärder som märks i vardagen',
         body:
-          'Tilläggsisolering av vind, tak eller fasad kan minska värmeförlusterna betydligt. Med rätt utförande kan energibehovet sjunka och investeringen bli lönsam på förhållandevis kort tid.',
+          'Tilläggsisolering, förbättrade ytterdelar och rätt utförda serviceinsatser kan sänka energibehovet, minska underhållet och skapa ett tryggare boende. Det är ofta de här insatserna som gör störst skillnad över tid.',
       },
     ],
     highlights: [
-      'Dränering för torrare och tryggare grund',
-      'Taklösningar med hållbara material',
-      'Tilläggsisolering som kan sänka energikostnader',
+      'Tak- och fasadåtgärder med fokus på hållbarhet',
+      'Praktiska förbättringar av husets funktion och skydd',
+      'Lösningar som stärker både ekonomi och boendekvalitet',
     ],
   },
 ]

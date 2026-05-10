@@ -61,35 +61,35 @@ function Benefits() {
 
   return (
     <section className="pt-0">
-      <div className="section-shell paper-noise overflow-hidden border-x border-b border-black/8 bg-[rgba(255,248,237,0.92)] px-6 py-10 sm:px-8 sm:py-14 lg:px-10">
+      <div className="section-shell overflow-hidden border-x border-b border-black/8 bg-[rgba(252,246,238,0.9)] px-6 py-12 sm:px-8 sm:py-18 lg:px-10">
         <span className="eyebrow text-[#8e4c26]">Vårt synsätt</span>
-        <h2 className="title-main mt-5 text-[2.6rem] text-[#181311] sm:text-[3.25rem]">
+        <h2 className="title-main mt-5 text-[2.45rem] text-[#181311] sm:text-[3rem]">
           Tillsammans bygger vi mer
         </h2>
-        <p className="mt-4 max-w-2xl text-[1.05rem] font-semibold leading-8 text-[#181311]">
-          Vår struktur är byggd för att skapa <span className="text-[#ca642f]">bättre flöde, bättre beslut</span> och
-          bättre resultat för alla som är del av projektet.
-        </p>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-black/62">
+        <div className="editorial-serif mt-4 max-w-2xl text-[1.45rem] leading-[1.15] text-[#6b4d3a] sm:text-[1.75rem]">
+          Vår struktur är byggd för att skapa
+          <span className="text-[#b86a3f]"> bättre flöde, bättre beslut</span> och bättre resultat.
+        </div>
+        <p className="mt-5 max-w-3xl text-sm leading-7 text-black/60 sm:text-base sm:leading-8">
           För att göra det dagliga arbetet lättare för både er och oss behöver
           projektet en stabil plattform bakom kulisserna. Där ryms inte bara
           kompetenta snickare, utan också värderingar, struktur och ett sätt att
           arbeta som gör våra kunder nöjda med pris, kvalitet och kommunikation.
         </p>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:grid-cols-4">
           {values.map((value) => (
             <div
               key={value.title}
-              className="rounded-[16px] border border-black/10 bg-white/44 p-6 shadow-[0_10px_30px_rgba(72,46,24,0.04)]"
+              className="border-t border-[#cfb8a0] pt-5"
             >
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#ca642f]/22 text-[#ca642f]">
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b86a3f]/18 bg-white/70 text-[#b86a3f]">
                 {value.icon}
               </div>
-              <h3 className="text-[1.08rem] font-bold uppercase tracking-[0.04em] text-[#181311]">
+              <h3 className="text-[1rem] font-bold uppercase tracking-[0.08em] text-[#181311]">
                 {value.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-black/62">
+              <p className="mt-3 text-sm leading-7 text-black/58">
                 {value.text}
               </p>
             </div>

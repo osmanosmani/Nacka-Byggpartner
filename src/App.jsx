@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
+import ProjectPage from './pages/ProjectPage'
 import ServicePage from './pages/ServicePage'
 import { getServiceBySlug } from './data/services'
+import { getGalleryProjectBySlug } from './data/galleryProjects'
 
 function App() {
   const [hash, setHash] = useState(window.location.hash)
@@ -18,6 +20,7 @@ function App() {
   useEffect(() => {
     if (
       hash.match(/^#\/tjanster\/([^/]+)$/) ||
+      hash.match(/^#\/projekt\/([^/]+)$/) ||
       hash === '#/om-oss' ||
       hash === '#/om-oss/kontakt' ||
       hash === '#/projekt' ||
@@ -31,6 +34,7 @@ function App() {
   }, [hash])
 
   const serviceMatch = hash.match(/^#\/tjanster\/([^/]+)$/)
+  const projectMatch = hash.match(/^#\/projekt\/([^/]+)$/)
 
   if (serviceMatch) {
     const service = getServiceBySlug(serviceMatch[1])
@@ -46,6 +50,14 @@ function App() {
 
   if (hash === '#/projekt') {
     return <ProjectsPage />
+  }
+
+  if (projectMatch) {
+    const project = getGalleryProjectBySlug(projectMatch[1])
+
+    if (project) {
+      return <ProjectPage key={project.slug} project={project} />
+    }
   }
 
   return <Home />

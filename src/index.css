@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -13,8 +13,8 @@ body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.6), transparent 40%),
-    linear-gradient(180deg, #d9cfb7 0%, #e8dcc2 18%, #f4ecde 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.6), transparent 36%),
+    linear-gradient(180deg, #ddd0b7 0%, #ebe0cc 18%, #f6efe5 100%);
   color: #181311;
 }
 
@@ -69,7 +69,7 @@ img {
 .section-shell {
   position: relative;
   z-index: 1;
-  width: min(1320px, calc(100% - 12px));
+  width: min(1280px, calc(100% - 14px));
   margin-inline: auto;
 }
 
@@ -77,22 +77,22 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  border: 1px solid rgba(202, 100, 47, 0.22);
+  border: 1px solid rgba(142, 76, 38, 0.18);
   border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.68rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.64rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .eyebrow::before {
   content: '';
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.38rem;
+  height: 0.38rem;
   border-radius: 999px;
-  background: #ca642f;
-  box-shadow: 0 0 0 3px rgba(202, 100, 47, 0.14);
+  background: #b86a3f;
+  box-shadow: 0 0 0 3px rgba(184, 106, 63, 0.12);
 }
 
 .eyebrow--plain {
@@ -114,29 +114,34 @@ img {
   text-transform: uppercase;
 }
 
+.editorial-serif {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.02em;
+}
+
 .hero-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(3.1rem, 7vw, 5.25rem);
+  font-size: clamp(3rem, 6.3vw, 5rem);
   font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: -0.025em;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
 .navbar-shell {
   position: relative;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
   background:
-    linear-gradient(180deg, rgba(251, 245, 236, 0.82) 0%, rgba(251, 245, 236, 0.72) 68%, rgba(251, 245, 236, 0.28) 100%);
-  box-shadow: 0 10px 24px rgba(56, 39, 22, 0.04);
+    linear-gradient(180deg, rgba(251, 245, 236, 0.88) 0%, rgba(251, 245, 236, 0.74) 72%, rgba(251, 245, 236, 0.22) 100%);
+  box-shadow: 0 10px 24px rgba(56, 39, 22, 0.035);
   clip-path: polygon(
-    10px 0,
-    calc(100% - 10px) 0,
-    100% 10px,
+    8px 0,
+    calc(100% - 8px) 0,
+    100% 8px,
     100% 100%,
     0 100%,
-    0 10px
+    0 8px
   );
 }
 
@@ -153,9 +158,9 @@ img {
 
 .paper-noise {
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 32%),
-    radial-gradient(circle at 80% 15%, rgba(202, 100, 47, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55));
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.56), transparent 32%),
+    radial-gradient(circle at 82% 16%, rgba(184, 106, 63, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.58));
 }
 
 .dark-swirl {
@@ -163,6 +168,11 @@ img {
     radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.035), transparent 24%),
     radial-gradient(circle at 80% 84%, rgba(255, 255, 255, 0.03), transparent 28%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+.media-chamfer {
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .cta-saw {
@@ -203,7 +213,7 @@ img {
 
 @media (min-width: 640px) {
   .section-shell {
-    width: min(1320px, calc(100% - 20px));
+    width: min(1280px, calc(100% - 20px));
   }
 
   .cta-saw {

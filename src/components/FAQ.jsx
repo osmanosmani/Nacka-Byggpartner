@@ -33,46 +33,48 @@ function FAQ() {
 
   return (
     <section id="faq" className="pt-0">
-      <div className="section-shell overflow-hidden border-x border-b border-black/8 bg-[rgba(248,241,229,0.96)] px-6 py-10 sm:px-8 sm:py-14 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-[0.48fr_1.52fr]">
+      <div
+        className="section-shell overflow-hidden border-x border-b border-white/8 bg-[#231f1d] px-6 py-12 text-white sm:px-8 sm:py-16 lg:px-10"
+        style={{ backgroundColor: '#141210' }}
+      >
+        <div className="grid gap-10 lg:grid-cols-[0.44fr_1.56fr]">
           <div>
-            <h2 className="title-main text-[3rem] text-[#181311] sm:text-[4rem]">
+            <span className="eyebrow border-white/12 text-[#e4b291]">Vanliga frågor</span>
+            <h2 className="title-main mt-5 text-[2.6rem] text-[#f4efe7] sm:text-[3.4rem]">
               FAQ
             </h2>
-            <p className="mt-4 max-w-xs text-sm leading-7 text-black/65">
-              Här är några vanliga frågor om nybyggnation, tillbyggnad,
-              kontrollansvar och hur vi arbetar.
+            <p className="mt-4 max-w-xs text-sm leading-7 text-white/62">
+              Några vanliga frågor om nybyggnation, tillbyggnad, kontrollansvar och hur vi arbetar.
             </p>
             <a
               href="#contact"
-              className="mt-7 inline-flex rounded-xl border border-[#ca642f]/25 px-6 py-3 text-sm font-semibold"
-              style={{ color: '#181311' }}
+              className="mt-7 inline-flex rounded-full border border-white/14 px-6 py-3 text-sm font-semibold text-[#e8d4ba] transition hover:bg-[#ca642f] hover:text-white"
             >
               Kontakta oss
             </a>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-1">
             {items.map((item, index) => {
               const isOpen = openIndex === index
 
               return (
-                <div key={item.question} className="border-b border-black/15 py-4">
+                <div key={item.question} className="border-b border-white/10 py-4">
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                    className="flex w-full items-center justify-between gap-4 text-left"
+                    className="flex w-full items-start justify-between gap-4 text-left"
                   >
-                    <h3 className="text-lg font-bold text-[#181311] sm:text-xl">
+                    <h3 className="text-[1.04rem] font-semibold leading-7 text-[#f4efe7] sm:text-[1.14rem]">
                       {item.question}
                     </h3>
-                    <span className="text-xl font-bold text-[#ca642f]">
-                      {isOpen ? '-' : '+'}
+                    <span className="mt-0.5 text-xl font-semibold text-[#d9b07c]">
+                      {isOpen ? '−' : '+'}
                     </span>
                   </button>
 
                   {isOpen && (
-                    <p className="mt-4 max-w-3xl text-sm leading-7 text-black/65">
+                    <p className="mt-4 max-w-3xl text-sm leading-7 text-white/62 sm:text-[0.98rem] sm:leading-8">
                       {item.answer}
                     </p>
                   )}

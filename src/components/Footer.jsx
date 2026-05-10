@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '../assets/brand-logo.svg'
-import contactImage from '../assets/img/nacka-byggpartner-gallery (11).jpg'
+import contactImage from '../assets/selected-work/contact/closing-photo.jpg'
 
 const CONTACT_EMAIL = 'info@nackabyggpartner.se'
 const CONTACT_PHONE = '0705-22 83 22'
@@ -35,14 +35,6 @@ function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
       <path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.5c0-.8.2-1.4 1.4-1.4h1.5V5.6c-.3 0-1.2-.1-2.3-.1-2.2 0-3.7 1.3-3.7 3.9v1.8H8v2.8h2.4v7h3.1Z" />
-    </svg>
-  )
-}
-
-function TwitterIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-      <path d="M18.9 7.1c.8-.1 1.5-.4 2.1-.8-.3.8-.9 1.4-1.6 1.8.7 0 1.3-.2 1.9-.5-.5.7-1 1.3-1.7 1.8v.7c0 4.5-3.4 9.7-9.7 9.7-1.9 0-3.7-.6-5.2-1.6h.8c1.6 0 3.1-.5 4.2-1.5-1.5 0-2.8-1-3.2-2.4.2 0 .4.1.7.1.3 0 .6 0 .9-.1-1.6-.3-2.7-1.7-2.7-3.3v-.1c.5.3 1 .4 1.6.4-.9-.6-1.5-1.6-1.5-2.8 0-.6.2-1.2.5-1.7 1.7 2.1 4.3 3.5 7.2 3.6-.1-.3-.1-.5-.1-.8 0-1.9 1.5-3.4 3.4-3.4 1 0 1.9.4 2.5 1.1.8-.1 1.5-.4 2.1-.8-.3.8-.8 1.5-1.5 1.9Z" />
     </svg>
   )
 }
@@ -101,17 +93,17 @@ function Footer() {
 
   return (
     <footer id="contact" className="pb-8">
-      <div className="section-shell overflow-hidden rounded-b-[28px] border-x border-b border-black/8 bg-[rgba(248,241,229,0.96)] px-5 py-7 text-[#181311] sm:px-8 sm:py-14 lg:px-10">
-        <div className="grid gap-5 xl:grid-cols-[0.78fr_1fr_0.82fr]">
+      <div className="section-shell overflow-hidden rounded-b-[28px] border-x border-b border-black/8 bg-[rgba(247,240,232,0.96)] px-5 py-7 text-[#181311] sm:px-8 sm:py-14 lg:px-10">
+        <div className="grid gap-5 xl:grid-cols-[0.76fr_1fr_0.84fr]">
           <div
-            className="rounded-[22px] border border-white/8 bg-[#141210] p-5 text-white shadow-[0_20px_60px_rgba(22,15,11,0.18)] sm:p-6"
-            style={{ backgroundColor: '#111111' }}
+            className="rounded-[18px] border border-white/6 bg-[#171412] p-5 text-white shadow-[0_18px_40px_rgba(22,15,11,0.14)] sm:p-6"
+            style={{ backgroundColor: '#12100f' }}
           >
             <img src={logo} alt="Nacka Byggpartner" className="h-12 w-auto sm:h-14" />
-            <h3 className="mt-5 text-[2rem] font-semibold tracking-[-0.03em] text-white sm:text-[2.5rem]">
+            <h3 className="mt-5 text-[2rem] font-medium tracking-[-0.03em] text-white sm:text-[2.45rem]">
               Kontakt
             </h3>
-            <p className="mt-3 max-w-sm text-sm leading-7 text-white/60">
+            <p className="mt-3 max-w-sm text-sm leading-7 text-white/58">
               Din personliga integritet är viktig för oss. Personuppgifter
               registreras i syfte att upprätthålla en god relation och avser
               främst namn, telefonnummer och e-postadress.
@@ -119,43 +111,43 @@ function Footer() {
 
             <div className="mt-8 grid gap-7 sm:grid-cols-2">
               <div>
-                <div className="text-white/82">
+                <div className="text-white/78">
                   <PinIcon />
                 </div>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
+                <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
                   Adress
                 </p>
-                <p className="mt-3 text-sm leading-7 text-white/78">
+                <p className="mt-3 text-sm leading-7 text-white/76">
                   Stockholm / Nacka
                 </p>
               </div>
 
               <div>
-                <div className="text-white/82">
+                <div className="text-white/78">
                   <PhoneIcon />
                 </div>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
+                <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
                   Telefon
                 </p>
-                <p className="mt-3 text-sm leading-7 text-white/78">
+                <p className="mt-3 text-sm leading-7 text-white/76">
                   <a href={`tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`}>{CONTACT_PHONE}</a>
                 </p>
               </div>
 
               <div>
-                <div className="text-white/82">
+                <div className="text-white/78">
                   <MailIcon />
                 </div>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
+                <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
                   E-post
                 </p>
-                <p className="mt-3 break-all text-sm leading-7 text-white/78">
+                <p className="mt-3 break-all text-sm leading-7 text-white/76">
                   <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 </p>
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
                   Följ oss
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
@@ -166,7 +158,6 @@ function Footer() {
                   >
                     <FacebookIcon />
                   </a>
-              
                   <a
                     href="#contact"
                     aria-label="Instagram"
@@ -187,13 +178,12 @@ function Footer() {
           </div>
 
           <div
-            className="rounded-[22px] border border-white/8 bg-[#26231f] p-5 text-white shadow-[0_20px_60px_rgba(22,15,11,0.18)] sm:p-6"
-            style={{ backgroundColor: '#2a2622' }}
+            className="rounded-[18px] border border-black/6 bg-[#f1e7d8] p-5 text-[#181311] shadow-[0_18px_40px_rgba(22,15,11,0.08)] sm:p-6"
           >
-            <h4 className="title-main text-[2rem] text-white sm:text-[2.35rem]">
+            <h4 className="title-main text-[1.9rem] text-[#201915] sm:text-[2.2rem]">
               Låt oss prata om ditt projekt
             </h4>
-            <p className="mt-3 max-w-lg text-sm leading-7 text-white/68">
+            <p className="mt-3 max-w-lg text-sm leading-7 text-black/60">
               Varje hem och varje byggprojekt börjar med ett samtal. Oavsett om du
               planerar nybyggnation, renovering eller vill bolla nästa steg finns
               vi här för att lyssna, vägleda och skapa en trygg väg framåt.
@@ -207,7 +197,7 @@ function Footer() {
                   value={form.firstName}
                   onChange={handleChange}
                   placeholder="Förnamn"
-                  className="w-full border border-white/10 bg-[#f6eee2] px-4 py-3 text-sm text-[#181311] outline-none"
+                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
                 />
                 <input
                   type="text"
@@ -215,7 +205,7 @@ function Footer() {
                   value={form.lastName}
                   onChange={handleChange}
                   placeholder="Efternamn"
-                  className="w-full border border-white/10 bg-[#f6eee2] px-4 py-3 text-sm text-[#181311] outline-none"
+                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
                 />
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -225,7 +215,7 @@ function Footer() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="E-post"
-                  className="w-full border border-white/10 bg-[#f6eee2] px-4 py-3 text-sm text-[#181311] outline-none"
+                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
                 />
                 <input
                   type="text"
@@ -233,7 +223,7 @@ function Footer() {
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="Telefon"
-                  className="w-full border border-white/10 bg-[#f6eee2] px-4 py-3 text-sm text-[#181311] outline-none"
+                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
                 />
               </div>
               <textarea
@@ -242,27 +232,27 @@ function Footer() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Meddelande"
-                className="w-full resize-y border border-white/10 bg-[#f6eee2] px-4 py-3 text-sm text-[#181311] outline-none"
+                className="w-full resize-y border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
               />
               <button
                 type="submit"
-                className="inline-flex min-h-11 w-full items-center justify-center bg-[#d8b281] px-6 py-3 text-sm font-semibold text-[#181311] transition hover:bg-[#e3bf94] sm:w-fit sm:min-w-[180px]"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#d8b281] px-6 py-3 text-sm font-semibold text-[#181311] transition hover:bg-[#e3bf94] sm:w-fit sm:min-w-[180px]"
               >
                 Skicka förfrågan
               </button>
             </form>
           </div>
 
-          <div className="overflow-hidden rounded-[22px] border border-black/10 bg-[#e9decc] shadow-[0_20px_60px_rgba(22,15,11,0.12)]">
+          <div className="overflow-hidden rounded-[18px] border border-black/8 bg-[#efe4d0] shadow-[0_18px_40px_rgba(22,15,11,0.08)]">
             <img
               src={contactImage}
               alt="Nacka Byggpartner projektbild"
-              className="h-full min-h-[320px] w-full object-cover object-center"
+              className="media-chamfer h-full min-h-[320px] w-full object-cover object-center"
             />
           </div>
         </div>
 
-        <div className="mt-7 border-t border-black/10 pt-4 text-center text-xs leading-6 text-black/55 sm:mt-8 sm:flex sm:items-center sm:justify-between sm:pt-5 sm:text-left">
+        <div className="mt-7 border-t border-black/10 pt-4 text-center text-xs leading-6 text-black/50 sm:mt-8 sm:flex sm:items-center sm:justify-between sm:pt-5 sm:text-left">
           <span>(c) 2026 Nacka Byggpartner. All rights reserved.</span>
           <span>Material och struktur anpassad efter levererat underlag.</span>
         </div>

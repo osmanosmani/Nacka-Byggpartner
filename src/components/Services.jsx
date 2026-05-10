@@ -4,36 +4,33 @@ function Services() {
   return (
     <section id="services" className="pt-0">
       <div
-        className="section-shell dark-swirl overflow-hidden border-x border-b border-white/8 bg-[#141414] px-5 py-8 text-white sm:px-8 sm:py-14 lg:px-10"
-        style={{ backgroundColor: '#101010' }}
+        className="section-shell dark-swirl overflow-hidden border-x border-b border-white/8 bg-[#141312] px-5 py-10 text-white sm:px-8 sm:py-16 lg:px-10"
+        style={{ backgroundColor: '#12100f' }}
       >
         <span className="eyebrow border-white/12 text-[#e4b291]">Tjänster</span>
 
-        <div className="mt-5 grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <h2 className="title-main text-[2.45rem] text-[#ff7f2f] sm:text-[2.85rem] lg:text-[4rem]">
+        <div className="mt-6 grid gap-5 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <h2 className="title-main text-[2.3rem] text-[#FF7F2F] sm:text-[2.6rem] lg:text-[3.5rem]">
             Våra tjänster
           </h2>
-          <p className="max-w-3xl text-[0.96rem] font-medium leading-7 text-white/74 sm:text-[1.02rem] sm:leading-8">
-            Oavsett om det handlar om att bygga nytt, bygga om, bygga till eller
-            få rätt stöd i processen arbetar vi med
-            <span className="text-[#ff7f2f]">
-              {' '}tydliga underlag, samordning och kvalitet i varje steg
-            </span>.
+          <p className="max-w-3xl text-[0.95rem] leading-7 text-white/68 sm:text-[1rem] sm:leading-8">
+            Oavsett om det handlar om att bygga nytt, bygga om, bygga till eller få rätt stöd i processen
+            arbetar vi med <span className="text-[#FF7F2F]">tydliga underlag, samordning och kvalitet</span> i varje steg.
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
           {services.map((service, index) => (
-            <div
+            <article
               key={service.slug}
-              className="overflow-hidden rounded-[12px] border border-white/10 bg-[#1b1b1b] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] xl:col-span-2"
+              className="border border-white/8 bg-[#161412] xl:col-span-2"
             >
-              <div className="p-2 pb-0">
-                <div className="overflow-hidden rounded-[6px] bg-[#151515] ring-1 ring-white/8">
+              <div className="p-2.5 pb-0">
+                <div className="overflow-hidden bg-[#100f0e] ring-1 ring-white/6">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className={`h-44 w-full object-cover transition duration-500 hover:scale-[1.02] ${
+                    className={`media-chamfer h-44 w-full object-cover transition duration-500 hover:scale-[1.02] ${
                       index === 0 ? 'object-[center_42%]' :
                       index === 1 ? 'object-center' :
                       index === 2 ? 'object-[center_68%]' :
@@ -45,22 +42,22 @@ function Services() {
                 </div>
               </div>
 
-              <div className="p-5 pt-4">
-                <h3 className="title-main text-[1.72rem] text-white">
+              <div className="px-5 pb-5 pt-4">
+                <h3 className="title-main text-[1.58rem] text-[#FF7F2F]">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-[0.94rem] leading-7 text-white/72">
+                <p className="mt-3 text-[0.92rem] leading-7 text-white/68">
                   {service.shortText}
                 </p>
                 <a
                   href={`#/tjanster/${service.slug}`}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#f1a36d] transition hover:text-[#ffbf96]"
+                  className="mt-5 inline-flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-[#FF7F2F] transition hover:text-white"
                 >
                   <span>Läs mer</span>
-                  <span aria-hidden="true" className="text-base leading-none">›</span>
+                  <span aria-hidden="true" className="text-sm leading-none">→</span>
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
