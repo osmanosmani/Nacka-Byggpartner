@@ -95,12 +95,60 @@ img {
   box-shadow: 0 0 0 3px rgba(202, 100, 47, 0.14);
 }
 
+.eyebrow--plain {
+  justify-content: center;
+  gap: 0;
+  padding-inline: 0.9rem;
+  text-align: center;
+}
+
+.eyebrow--plain::before {
+  display: none;
+}
+
 .title-main {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3.1rem, 7vw, 5.25rem);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.navbar-shell {
+  position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(251, 245, 236, 0.82) 0%, rgba(251, 245, 236, 0.72) 68%, rgba(251, 245, 236, 0.28) 100%);
+  box-shadow: 0 10px 24px rgba(56, 39, 22, 0.04);
+  clip-path: polygon(
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    0 100%,
+    0 10px
+  );
+}
+
+.navbar-shell::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 32px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(251, 245, 236, 0.16), rgba(251, 245, 236, 0));
 }
 
 .paper-noise {

@@ -18,8 +18,8 @@ function Home() {
       <Services />
       <About />
       <Benefits />
-      <Team />
       <Testimonials />
+      <Team />
       <Gallery />
       <FAQ />
       <CTA />

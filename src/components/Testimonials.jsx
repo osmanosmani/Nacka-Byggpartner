@@ -1,39 +1,46 @@
 function Testimonials() {
-  const points = [
-    'Beställare, byggföretag, installatörer och konstruktörer arbetar mot samma mål.',
-    'Yrkesgruppernas kalendrar och resurser samordnas utifrån projektets bästa.',
-    'Öppna kort, tydliga roller och ett gemensamt ansvar skapar större kundnytta.',
+  const reviews = [
+    {
+      name: 'Anna Lindberg',
+      text: 'Vi upplevde tydlig kommunikation, bra struktur och ett resultat som kändes genomtänkt från början till slut.',
+    },
+    {
+      name: 'Johan Ekström',
+      text: 'Det märktes att de arbetade metodiskt och höll vad de lovade. Projektet kändes tryggt genom hela processen.',
+    },
+    {
+      name: 'Maria Sjöberg',
+      text: 'Professionellt bemötande, god planering och hög kvalitet i utförandet. En väldigt positiv upplevelse för oss.',
+    },
   ]
 
   return (
     <section className="pt-0">
       <div className="section-shell overflow-hidden border-x border-b border-black/8 bg-[rgba(248,241,229,0.94)] px-6 py-10 sm:px-8 sm:py-14 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <div>
-            <span className="eyebrow text-[#8e4c26]">Samverkan</span>
-            <h2 className="title-main mt-5 text-[3.2rem] text-[#c55f2d] sm:text-[4.5rem]">
-              Vi bygger tillsammans
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-black/65">
-              Traditionella motparter i ett projekt blir samarbetspartner med er
-              som byggherre i fokus. Det ger ett mer strukturerat samarbete och
-              en tydligare riktning genom hela byggprocessen.
-            </p>
-          </div>
+        <div>
+          <span className="eyebrow text-[#8e4c26]">Omdömen</span>
+          <h2 className="title-main mt-5 text-[2.9rem] text-[#c55f2d] sm:text-[3.9rem]">
+            Vad våra kunder säger
+          </h2>
+        </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {points.map((point) => (
-              <article
-                key={point}
-                className="rounded-[22px] border border-black/10 bg-white/60 p-6 shadow-[0_12px_30px_rgba(63,43,24,0.05)]"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2e2d8] text-[#ca642f]">
-                  +
-                </div>
-                <p className="text-sm leading-7 text-black/70">{point}</p>
-              </article>
-            ))}
-          </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {reviews.map((review) => (
+            <article
+              key={review.name}
+              className="border border-black/10 bg-white/58 p-6 shadow-[0_12px_30px_rgba(63,43,24,0.05)]"
+            >
+              <div className="text-[1.1rem] tracking-[0.24em] text-[#ca642f]">
+                ★★★★★
+              </div>
+              <p className="mt-4 text-sm leading-7 text-black/68">
+                {review.text}
+              </p>
+              <p className="mt-5 text-sm font-semibold text-[#181311]">
+                {review.name}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

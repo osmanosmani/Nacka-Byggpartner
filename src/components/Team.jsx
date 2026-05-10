@@ -3,27 +3,27 @@ function Team() {
     {
       number: '01',
       title: 'Planera',
-      text: 'Varje lyckat projekt börjar med en behovsanalys och en tydlig planering tillsammans med kunden.',
+      text: 'Varje lyckat projekt börjar med behovsanalys, relation och en tydlig plan för hur målen ska nås tillsammans.',
     },
     {
       number: '02',
       title: 'Projektera',
-      text: 'Vi tar fram ritningar, beskrivningar och tekniska underlag för att minska risken för missöden.',
+      text: 'Vi tar fram ritningar, beskrivningar och tekniska underlag som gör processen tydligare och minskar onödiga risker.',
     },
     {
       number: '03',
-      title: 'Upphandling',
-      text: 'Rätt entreprenörer väljs utifrån pris, förmåga, tillgänglighet och kvalitet i relation till projektet.',
+      title: 'Samordna',
+      text: 'Entreprenörer, leveranser och beslut synkas så att alla arbetar mot samma mål med kundens intresse i fokus.',
     },
     {
       number: '04',
       title: 'Genomföra',
-      text: 'Byggmöten, uppföljning och samordning driver processen framåt med kundens intresse i fokus.',
+      text: 'Med struktur, kommunikation och uppföljning driver vi bygget framåt på ett sätt som skapar trygghet i vardagen.',
     },
     {
       number: '05',
-      title: 'Överlämning',
-      text: 'När bygget är klart finns vi kvar för kontroll, trygg överlämning och eventuella frågor.',
+      title: 'Överlämna',
+      text: 'När bygget är klart säkerställer vi ett ordnat avslut, tydlig överlämning och ett resultat vi kan stå bakom.',
     },
   ]
 
@@ -34,13 +34,14 @@ function Team() {
         style={{ backgroundColor: '#111111' }}
       >
         <div className="text-center">
-          <span className="eyebrow border-white/12 text-[#e4b291]">Så funkar det</span>
-          <h2 className="title-main mt-5 text-[3.2rem] text-[#ff7f2f] sm:text-[4.5rem]">
-            Byggprocessen
+          <span className="eyebrow border-white/12 text-[#e4b291]">Vår process</span>
+          <h2 className="title-main mt-5 text-[3rem] text-[#ff7f2f] sm:text-[4.05rem]">
+            Bra byggprojekt börjar med meningsfulla relationer
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-white/65">
-            Byggprojekt är komplexa och tidskrävande. Därför arbetar vi metodiskt
-            genom hela processen från planering till överlämning.
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-white/65">
+            Byggt på förtroende. Skapat med avsikt. Nacka Byggpartner bygger inte
+            bara, vi skapar bestående värden genom personlig service, tydlig
+            kommunikation och ett samarbete som håller ihop hela processen.
           </p>
         </div>
 
@@ -52,7 +53,7 @@ function Team() {
               style={{ backgroundColor: '#1d1d1d' }}
             >
               <div className="title-main text-5xl text-[#ff7f2f]">{step.number}</div>
-              <h3 className="mt-4 title-main text-[2rem] text-white">{step.title}</h3>
+              <h3 className="mt-4 title-main text-[1.8rem] text-white">{step.title}</h3>
               <p className="mt-3 text-sm leading-7 text-white/68">{step.text}</p>
             </div>
           ))}

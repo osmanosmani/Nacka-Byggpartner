@@ -9,11 +9,11 @@ function Services() {
       >
         <span className="eyebrow border-white/12 text-[#e4b291]">Tjänster</span>
 
-        <div className="mt-5 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <h2 className="title-main text-[2.8rem] text-[#ff7f2f] sm:text-[3.2rem] lg:text-[4.6rem]">
+        <div className="mt-5 grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <h2 className="title-main text-[2.45rem] text-[#ff7f2f] sm:text-[2.85rem] lg:text-[4rem]">
             Våra tjänster
           </h2>
-          <p className="max-w-3xl text-base font-medium leading-7 text-white/88 sm:text-lg sm:leading-8">
+          <p className="max-w-3xl text-[0.96rem] font-medium leading-7 text-white/74 sm:text-[1.02rem] sm:leading-8">
             Oavsett om det handlar om att bygga nytt, bygga om, bygga till eller
             få rätt stöd i processen arbetar vi med
             <span className="text-[#ff7f2f]">
@@ -26,11 +26,10 @@ function Services() {
           {services.map((service, index) => (
             <div
               key={service.slug}
-              className="overflow-hidden rounded-[20px] border border-white/10 bg-[#222222] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] xl:col-span-2"
-              style={{ backgroundColor: '#1b1b1b' }}
+              className="overflow-hidden rounded-[12px] border border-white/10 bg-[#1b1b1b] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] xl:col-span-2"
             >
               <div className="p-2 pb-0">
-                <div className="overflow-hidden rounded-[16px] bg-[#151515] ring-1 ring-white/8">
+                <div className="overflow-hidden rounded-[6px] bg-[#151515] ring-1 ring-white/8">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -47,17 +46,18 @@ function Services() {
               </div>
 
               <div className="p-5 pt-4">
-                <h3 className="title-main text-[2rem] text-white">
+                <h3 className="title-main text-[1.72rem] text-white">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-white/82">
+                <p className="mt-3 text-[0.94rem] leading-7 text-white/72">
                   {service.shortText}
                 </p>
                 <a
                   href={`#/tjanster/${service.slug}`}
-                  className="mt-5 inline-flex rounded-xl border border-white/16 bg-white/8 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-[#ff7f2f]/30 hover:text-[#ffb17e]"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#f1a36d] transition hover:text-[#ffbf96]"
                 >
-                  Läs mer
+                  <span>Läs mer</span>
+                  <span aria-hidden="true" className="text-base leading-none">›</span>
                 </a>
               </div>
             </div>
