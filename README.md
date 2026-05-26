@@ -44,6 +44,12 @@ Run linting:
 npm run lint
 ```
 
+Run the full pre-publish check:
+
+```bash
+npm run check
+```
+
 ## Project Structure
 
 ```text
@@ -51,20 +57,23 @@ src/
   assets/          Brand assets, gallery images, video
   components/      Reusable page sections
   data/            Service content and route data
-  pages/           Home page and service detail page
+  pages/           Home, about, project, and service detail pages
 ```
 
 ## Routing
 
-The project currently uses hash-based routing for service detail pages.
+The project uses hash-based routing for service and project detail pages.
 
 Examples:
 
 - `#/tjanster/nybyggnation`
 - `#/tjanster/tillbyggnation`
 - `#/tjanster/byggservice`
+- `#/projekt`
+- `#/projekt/renovering-detaljarbete`
 
-This setup works well on simple static hosting such as GitHub Pages.
+This setup works well on simple static hosting because all URLs are served from
+`index.html`; the route state stays after `#`.
 
 ## Assets
 
@@ -87,26 +96,35 @@ Before publishing, verify:
 1. The final logo, phone number, and contact details are correct.
 2. The selected project images are approved for public use.
 3. The video size is acceptable for production hosting.
+4. The production domain is correct in `src/seo.js`, `index.html`,
+   `public/robots.txt`, and `public/sitemap.xml`.
 
-## GitHub Workflow
+## Production Deploy
 
-Recommended basic workflow:
-
-1. Create a GitHub repository.
-2. Connect this local project to the remote repository.
-3. Push the main branch.
-4. Continue future edits through commits so updates stay trackable.
-
-Typical commands:
+Build the production files:
 
 ```bash
-git init
-git add .
-git commit -m "Initial website setup"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
+npm ci
+npm run check
 ```
+
+Upload the contents of `dist/` to the hosting web root, usually `public_html/`,
+`www/`, or the folder assigned to the domain.
+
+Hosting config files are copied into `dist/` during build:
+
+- `public/.htaccess` is for Apache/cPanel hosting.
+- `public/web.config` is for IIS/Windows hosting.
+
+Only one of these files is normally used by the server; the other is ignored.
+
+After upload, verify:
+
+1. The homepage loads at the final domain.
+2. The menu and all section links work on mobile and desktop.
+3. Service routes such as `/#/tjanster/nybyggnation` open correctly.
+4. Project routes such as `/#/projekt/renovering-detaljarbete` open correctly.
+5. `robots.txt`, `sitemap.xml`, and `og-image.jpg` are reachable from the root.
 
 ## Status
 
