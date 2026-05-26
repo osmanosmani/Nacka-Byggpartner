@@ -4,10 +4,21 @@ import contactImage from '../assets/selected-work/contact/closing-photo.jpg'
 
 const CONTACT_EMAIL = 'info@nackabyggpartner.se'
 const CONTACT_PHONE = '0705-22 83 22'
+const fieldClass =
+  'w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm font-normal normal-case tracking-normal text-[#181311] outline-none transition focus:border-[#b55f32] focus:ring-2 focus:ring-[#b55f32]/20'
+const labelClass = 'grid gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-black/55'
 
 function PinIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-7 w-7">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-7 w-7"
+      aria-hidden="true"
+      focusable="false"
+    >
       <path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z" />
       <circle cx="12" cy="10" r="2.2" />
     </svg>
@@ -16,7 +27,15 @@ function PinIcon() {
 
 function PhoneIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-7 w-7">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-7 w-7"
+      aria-hidden="true"
+      focusable="false"
+    >
       <path d="M7.8 4.5h2.3l1.1 4-1.6 1.6a14 14 0 0 0 4.8 4.8l1.6-1.6 4 1.1v2.3a1.8 1.8 0 0 1-1.9 1.8A15.9 15.9 0 0 1 5.9 6.4 1.8 1.8 0 0 1 7.8 4.5Z" />
     </svg>
   )
@@ -24,35 +43,17 @@ function PhoneIcon() {
 
 function MailIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-7 w-7">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-7 w-7"
+      aria-hidden="true"
+      focusable="false"
+    >
       <rect x="3.5" y="5.5" width="17" height="13" rx="2.2" />
       <path d="m4.5 7 7.5 6 7.5-6" />
-    </svg>
-  )
-}
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-      <path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.5c0-.8.2-1.4 1.4-1.4h1.5V5.6c-.3 0-1.2-.1-2.3-.1-2.2 0-3.7 1.3-3.7 3.9v1.8H8v2.8h2.4v7h3.1Z" />
-    </svg>
-  )
-}
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
-
-function YouTubeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-      <path d="M21 8.5c-.2-1.4-1.3-2.5-2.7-2.7C16.9 5.5 14.7 5.5 12 5.5s-4.9 0-6.3.3C4.3 6 3.2 7.1 3 8.5c-.3 1.4-.3 2.7-.3 3.5s0 2.1.3 3.5c.2 1.4 1.3 2.5 2.7 2.7 1.4.3 3.6.3 6.3.3s4.9 0 6.3-.3c1.4-.2 2.5-1.3 2.7-2.7.3-1.4.3-2.7.3-3.5s0-2.1-.3-3.5ZM10 15.2V8.8l5.2 3.2-5.2 3.2Z" />
     </svg>
   )
 }
@@ -103,7 +104,7 @@ function Footer() {
             <h3 className="mt-5 text-[2rem] font-medium tracking-[-0.03em] text-white sm:text-[2.45rem]">
               Kontakt
             </h3>
-            <p className="mt-3 max-w-sm text-sm leading-7 text-white/58">
+            <p id="contact-privacy" className="mt-3 max-w-sm text-sm leading-7 text-white/58">
               Din personliga integritet är viktig för oss. Personuppgifter
               registreras i syfte att upprätthålla en god relation och avser
               främst namn, telefonnummer och e-postadress.
@@ -134,45 +135,16 @@ function Footer() {
                 </p>
               </div>
 
-              <div>
+              <div className="sm:col-span-2">
                 <div className="text-white/78">
                   <MailIcon />
                 </div>
                 <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
                   E-post
                 </p>
-                <p className="mt-3 break-all text-sm leading-7 text-white/76">
+                <p className="mt-3 break-words text-sm leading-7 text-white/76">
                   <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 </p>
-              </div>
-
-              <div>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
-                  Följ oss
-                </p>
-                <div className="mt-4 flex flex-wrap items-center gap-2.5">
-                  <a
-                    href="#contact"
-                    aria-label="Facebook"
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#1877f2] text-white transition hover:scale-105"
-                  >
-                    <FacebookIcon />
-                  </a>
-                  <a
-                    href="#contact"
-                    aria-label="Instagram"
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7)] text-white transition hover:scale-105"
-                  >
-                    <InstagramIcon />
-                  </a>
-                  <a
-                    href="#contact"
-                    aria-label="YouTube"
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ff0000] text-white transition hover:scale-105"
-                  >
-                    <YouTubeIcon />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -189,51 +161,75 @@ function Footer() {
               vi här för att lyssna, vägleda och skapa en trygg väg framåt.
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-6 grid gap-3">
+            <form onSubmit={handleSubmit} className="mt-6 grid gap-3" aria-describedby="contact-privacy">
               <div className="grid gap-3 sm:grid-cols-2">
-                <input
-                  type="text"
-                  name="firstName"
-                  value={form.firstName}
-                  onChange={handleChange}
-                  placeholder="Förnamn"
-                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  value={form.lastName}
-                  onChange={handleChange}
-                  placeholder="Efternamn"
-                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
-                />
+                <label className={labelClass}>
+                  Förnamn *
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={form.firstName}
+                    onChange={handleChange}
+                    placeholder="Förnamn"
+                    autoComplete="given-name"
+                    required
+                    className={fieldClass}
+                  />
+                </label>
+                <label className={labelClass}>
+                  Efternamn
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={form.lastName}
+                    onChange={handleChange}
+                    placeholder="Efternamn"
+                    autoComplete="family-name"
+                    className={fieldClass}
+                  />
+                </label>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="E-post"
-                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
-                />
-                <input
-                  type="text"
-                  name="phone"
-                  value={form.phone}
-                  onChange={handleChange}
-                  placeholder="Telefon"
-                  className="w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
-                />
+                <label className={labelClass}>
+                  E-post *
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="E-post"
+                    autoComplete="email"
+                    required
+                    className={fieldClass}
+                  />
+                </label>
+                <label className={labelClass}>
+                  Telefon
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="Telefon"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    className={fieldClass}
+                  />
+                </label>
               </div>
-              <textarea
-                rows="4"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Meddelande"
-                className="w-full resize-y border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm text-[#181311] outline-none"
-              />
+              <label className={labelClass}>
+                Meddelande *
+                <textarea
+                  rows="4"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Meddelande"
+                  minLength={8}
+                  required
+                  className={`${fieldClass} resize-y`}
+                />
+              </label>
               <button
                 type="submit"
                 className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#d8b281] px-6 py-3 text-sm font-semibold text-[#181311] transition hover:bg-[#b55f32] hover:text-white sm:w-fit sm:min-w-[180px]"
