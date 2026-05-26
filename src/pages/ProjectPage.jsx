@@ -68,6 +68,7 @@ function ProjectPage({ project }) {
                         <img
                           src={project.images[imageIndex]}
                           alt={`${project.title} bild ${imageIndex + 1}`}
+                          decoding="async"
                           className="media-chamfer h-[240px] w-full object-cover sm:h-[340px]"
                         />
                       </div>

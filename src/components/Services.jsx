@@ -30,6 +30,8 @@ function Services() {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
+                    decoding="async"
                     className={`media-chamfer h-44 w-full object-cover transition duration-500 hover:scale-[1.02] ${
                       index === 0 ? 'object-[center_42%]' :
                       index === 1 ? 'object-center' :

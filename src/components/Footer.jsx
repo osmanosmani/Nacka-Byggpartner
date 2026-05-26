@@ -247,6 +247,8 @@ function Footer() {
             <img
               src={contactImage}
               alt="Nacka Byggpartner projektbild"
+              loading="lazy"
+              decoding="async"
               className="media-chamfer h-full min-h-[320px] w-full object-cover object-center"
             />
           </div>

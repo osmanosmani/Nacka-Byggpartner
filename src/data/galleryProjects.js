@@ -15,11 +15,11 @@ import interior1 from '../assets/selected-work/projects/kok-badrum/detail-1.jpg'
 import interior2 from '../assets/selected-work/projects/kok-badrum/detail-2.jpg'
 
 import facadeHero from '../assets/selected-work/projects/tak-fasad/hero.jpg'
-import facade1 from '../assets/selected-work/projects/tak-fasad/detail-1.png'
+import facade1 from '../assets/selected-work/projects/tak-fasad/detail-1.jpg'
 import facade2 from '../assets/selected-work/projects/tak-fasad/detail-2.jpg'
 
 import controlHero from '../assets/selected-work/projects/kontroll-kvalitet/hero.jpeg'
-import control1 from '../assets/selected-work/projects/kontroll-kvalitet/detail-1.png'
+import control1 from '../assets/selected-work/projects/kontroll-kvalitet/detail-1.jpg'
 import control2 from '../assets/selected-work/projects/kontroll-kvalitet/detail-2.jpg'
 
 export const galleryProjects = [

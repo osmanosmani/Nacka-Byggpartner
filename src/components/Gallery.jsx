@@ -28,6 +28,8 @@ function Gallery() {
                   <img
                     src={project.cover}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="media-chamfer h-[240px] w-full object-cover shadow-[0_18px_34px_rgba(37,26,18,0.12)] transition duration-500 group-hover:scale-[1.02] sm:h-[280px]"
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 flex translate-y-1/2 justify-center px-4">

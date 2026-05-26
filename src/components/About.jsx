@@ -51,6 +51,8 @@ function About() {
           <img
             src={image2}
             alt="Färdigt husprojekt från Nacka Byggpartner"
+            loading="lazy"
+            decoding="async"
             className="media-chamfer h-[280px] w-full rounded-[8px] object-cover object-center sm:h-[460px] lg:h-[560px]"
           />
         </div>
