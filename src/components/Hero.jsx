@@ -27,10 +27,6 @@ function Hero() {
                 Komplett partner i byggprocessen
               </span>
 
-              <div className="editorial-serif mt-5 max-w-lg text-[1.35rem] font-medium italic text-[#6e4c37] sm:text-[1.7rem]">
-                Byggt med förtroende, precision och lugn
-              </div>
-
               <h1 className="hero-title mt-4 max-w-xl text-[#b55f32] sm:mt-5">
                 Från plan
                 <br />

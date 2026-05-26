@@ -236,7 +236,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#d8b281] px-6 py-3 text-sm font-semibold text-[#181311] transition hover:bg-[#e3bf94] sm:w-fit sm:min-w-[180px]"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#d8b281] px-6 py-3 text-sm font-semibold text-[#181311] transition hover:bg-[#b55f32] hover:text-white sm:w-fit sm:min-w-[180px]"
               >
                 Skicka förfrågan
               </button>

@@ -49,18 +49,20 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Nacka Byggpartner"
-                className="h-[3.55rem] w-auto sm:h-[4.15rem] md:h-[4.95rem]"
+                className="h-[3.15rem] w-auto sm:h-[3.75rem] md:h-[4.1rem] lg:h-[4.95rem]"
               />
             </a>
 
-            <nav className="hidden items-center gap-7 text-[0.76rem] font-semibold tracking-[0.16em] text-black/63 md:flex">
+            <nav className="hidden items-center gap-5 text-[0.82rem] font-semibold uppercase tracking-[0.24em] text-[#1c1914] lg:flex">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   aria-current={isActive(item.href) ? 'page' : undefined}
-                  className={`transition hover:text-[#b86a3f] ${
-                    isActive(item.href) ? 'text-[#b86a3f]' : ''
+                  className={`navbar-link px-2 py-2 border-b-2 border-transparent transition duration-200 ease-out ${
+                    isActive(item.href)
+                      ? 'text-[#231f1d] border-[#231f1d]'
+                      : 'text-[#1c1914]/90 hover:text-[#231f1d] hover:border-[#b86a3f] hover:scale-105'
                   }`}
                 >
                   {item.label}
@@ -70,7 +72,7 @@ function Navbar() {
 
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/80 shadow-sm transition hover:bg-white md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/80 shadow-sm transition hover:bg-white lg:hidden"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Stäng meny' : 'Öppna meny'}
               aria-expanded={isOpen}
@@ -108,10 +110,10 @@ function Navbar() {
                     href={item.href}
                     onClick={closeMenu}
                     aria-current={isActive(item.href) ? 'page' : undefined}
-                    className={`rounded-md px-4 py-3 transition ${
+                    className={`navbar-link rounded-md px-4 py-3 transition duration-200 ease-out ${
                       isActive(item.href)
                         ? 'bg-[#ca642f]/12 text-[#b86a3f]'
-                        : 'text-[#181311] hover:bg-black/5'
+                        : 'text-[#181311] hover:bg-black/5 hover:text-[#231f1d]'
                     }`}
                   >
                     {item.label}

@@ -56,7 +56,7 @@ function ProjectsPage() {
                     />
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 flex translate-y-1/2 justify-center px-4">
                       <div className="flex h-[68px] w-full max-w-[332px] items-center justify-center border border-[#b99365]/24 bg-[rgba(220,192,154,0.75)] px-6 text-center shadow-[0_14px_28px_rgba(37,26,18,0.16)] backdrop-blur-[4px] sm:h-[72px] sm:max-w-[348px]">
-                        <h2 className="font-['Barlow_Condensed'] text-[0.98rem] font-semibold uppercase tracking-[0.14em] text-[#231f1d] sm:text-[1.06rem]">
+                        <h2 className="font-[Barlow_Condensed] text-[0.98rem] font-semibold uppercase tracking-[0.14em] text-[#231f1d] sm:text-[1.06rem]">
                           {project.title}
                         </h2>
                       </div>
