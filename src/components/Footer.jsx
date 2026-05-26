@@ -7,6 +7,14 @@ const CONTACT_PHONE = '0705-22 83 22'
 const fieldClass =
   'w-full border border-black/8 bg-[#fbf7ef] px-4 py-3 text-sm font-normal normal-case tracking-normal text-[#181311] outline-none transition focus:border-[#b55f32] focus:ring-2 focus:ring-[#b55f32]/20'
 const labelClass = 'grid gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-black/55'
+const socialIconClass =
+  'inline-flex h-8 w-8 items-center justify-center rounded-full text-white shadow-sm transition hover:scale-105'
+
+const SOCIAL_LINKS = [
+  { name: 'Facebook', href: '', className: 'bg-[#1877f2]' },
+  { name: 'Instagram', href: '', className: 'bg-[linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7)]' },
+  { name: 'YouTube', href: '', className: 'bg-[#ff0000]' },
+]
 
 function PinIcon() {
   return (
@@ -56,6 +64,46 @@ function MailIcon() {
       <path d="m4.5 7 7.5 6 7.5-6" />
     </svg>
   )
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true" focusable="false">
+      <path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.5c0-.8.2-1.4 1.4-1.4h1.5V5.6c-.3 0-1.2-.1-2.3-.1-2.2 0-3.7 1.3-3.7 3.9v1.8H8v2.8h2.4v7h3.1Z" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-4 w-4"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function YouTubeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true" focusable="false">
+      <path d="M21 8.5c-.2-1.4-1.3-2.5-2.7-2.7C16.9 5.5 14.7 5.5 12 5.5s-4.9 0-6.3.3C4.3 6 3.2 7.1 3 8.5c-.3 1.4-.3 2.7-.3 3.5s0 2.1.3 3.5c.2 1.4 1.3 2.5 2.7 2.7 1.4.3 3.6.3 6.3.3s4.9 0 6.3-.3c1.4-.2 2.5-1.3 2.7-2.7.3-1.4.3-2.7.3-3.5s0-2.1-.3-3.5ZM10 15.2V8.8l5.2 3.2-5.2 3.2Z" />
+    </svg>
+  )
+}
+
+function SocialIcon({ name }) {
+  if (name === 'Facebook') return <FacebookIcon />
+  if (name === 'Instagram') return <InstagramIcon />
+  return <YouTubeIcon />
 }
 
 function Footer() {
@@ -145,6 +193,38 @@ function Footer() {
                 <p className="mt-3 break-words text-sm leading-7 text-white/76">
                   <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 </p>
+              </div>
+
+              <div className="sm:col-span-2">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#d9b07c]">
+                  Följ oss
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                  {SOCIAL_LINKS.map((item) =>
+                    item.href ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={item.name}
+                        className={`${socialIconClass} ${item.className}`}
+                      >
+                        <SocialIcon name={item.name} />
+                      </a>
+                    ) : (
+                      <span
+                        key={item.name}
+                        role="img"
+                        aria-label={`${item.name} kommer snart`}
+                        title={`${item.name} kommer snart`}
+                        className={`${socialIconClass} ${item.className} cursor-default opacity-90`}
+                      >
+                        <SocialIcon name={item.name} />
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
           </div>
