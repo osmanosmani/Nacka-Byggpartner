@@ -7,6 +7,8 @@ import ServicePage from './pages/ServicePage'
 import { getServiceBySlug } from './data/services'
 import { getGalleryProjectBySlug } from './data/galleryProjects'
 
+const sectionIds = new Set(['home', 'about', 'services', 'gallery', 'faq', 'contact'])
+
 function SiteApp() {
   const [hash, setHash] = useState(window.location.hash)
 
@@ -18,6 +20,35 @@ function SiteApp() {
   }, [])
 
   useEffect(() => {
+    const sectionId = hash === '' ? 'home' : hash.startsWith('#/') ? null : hash.slice(1)
+
+    if (sectionId && sectionIds.has(sectionId)) {
+      const scrollToSection = () => {
+        const target = document.getElementById(sectionId)
+        const header = document.querySelector('header')
+
+        if (!target) return
+
+        const headerOffset = header?.getBoundingClientRect().height ?? 0
+        const targetTop = target.getBoundingClientRect().top + window.scrollY
+
+        window.scrollTo({
+          top: Math.max(targetTop - headerOffset - 16, 0),
+          behavior: 'auto',
+        })
+      }
+
+      const animationFrame = requestAnimationFrame(scrollToSection)
+      const firstTimeout = window.setTimeout(scrollToSection, 350)
+      const secondTimeout = window.setTimeout(scrollToSection, 900)
+
+      return () => {
+        cancelAnimationFrame(animationFrame)
+        window.clearTimeout(firstTimeout)
+        window.clearTimeout(secondTimeout)
+      }
+    }
+
     if (
       hash.match(/^#\/tjanster\/([^/]+)$/) ||
       hash.match(/^#\/projekt\/([^/]+)$/) ||

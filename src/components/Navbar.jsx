@@ -100,7 +100,7 @@ function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px] md:hidden">
+        <div className="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px] lg:hidden">
           <div className="section-shell mt-[4.7rem]">
             <div className="rounded-[20px] border border-black/10 bg-[rgba(250,245,237,0.98)] px-5 py-5 shadow-[0_25px_60px_rgba(34,24,15,0.18)]">
               <nav className="flex flex-col gap-2 text-sm font-semibold">
