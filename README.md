@@ -1,24 +1,48 @@
 # Nacka Byggpartner
 
-Website for Nacka Byggpartner built with React, Vite, and Tailwind CSS 4.
+Modern business website for a Swedish construction company, built with React, Vite, and Tailwind CSS.
 
-The site includes:
+## Live Website
 
-- a video-based hero section
-- a modern mobile hamburger menu
-- a services section with separate detail pages
-- company-specific Swedish copy
-- a gallery using real project images
-- a contact/footer area adapted to the visual references
+[https://dev.nackabyggpartner.se](https://dev.nackabyggpartner.se)
 
 ## Tech Stack
 
-- React 19
-- Vite 8
-- Tailwind CSS 4
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- Responsive design
 - ESLint
 
+## Project Overview
+
+This project was created as a modern, responsive business website for Nacka Byggpartner. The focus was on clean design, usability, service presentation, visual structure, and a professional online presence.
+
+## Project Features
+
+- Responsive layout for desktop and mobile
+- Modern video-based hero section
+- Service presentation pages
+- Gallery and project imagery
+- Contact section
+- SEO-friendly structure
+- Production build with Vite
+- Hash-based detail routes for static hosting
+
+## Project Note
+
+This project is presented as part of my personal portfolio to demonstrate frontend development, responsive design, and modern web implementation skills.
+
+All rights to brand identity, business content, and visual materials belong to their respective owners. The code is shared for portfolio and learning purposes only.
+
 ## Project Scripts
+
+Install dependencies:
+
+```bash
+npm install
+```
 
 Run development server:
 
@@ -32,7 +56,7 @@ Create production build:
 npm run build
 ```
 
-Preview production build locally:
+Preview production build:
 
 ```bash
 npm run preview
